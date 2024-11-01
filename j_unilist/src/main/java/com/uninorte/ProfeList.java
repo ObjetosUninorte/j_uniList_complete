@@ -8,16 +8,25 @@ import java.util.ListIterator;
 
 public class ProfeList<E> extends AbstractList<E> implements List<E>{
 
+    private Node head;
+    private int index;
+
+    
+
     @Override
     public int size() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'size'");
+        int counter = 0;
+        Node t = head;
+        while(t != null){
+            t = t.getNextNode();
+            counter++;
+        }
+        return counter;
     }
 
     @Override
     public boolean isEmpty() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'isEmpty'");
+        return head == null;
     }
 
     @Override
@@ -46,8 +55,8 @@ public class ProfeList<E> extends AbstractList<E> implements List<E>{
 
     @Override
     public boolean add(Object e) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'add'");
+        Node node 
+        if (head == null)
     }
 
     @Override

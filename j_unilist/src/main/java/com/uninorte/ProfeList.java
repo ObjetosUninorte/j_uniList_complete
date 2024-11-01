@@ -9,7 +9,7 @@ import java.util.ListIterator;
 public class ProfeList<E> extends AbstractList<E> implements List<E>{
 
     private Node head;
-    private int index;
+    private int index = 0;;
 
     
 
@@ -55,8 +55,16 @@ public class ProfeList<E> extends AbstractList<E> implements List<E>{
 
     @Override
     public boolean add(Object e) {
-        Node node 
-        if (head == null)
+        Node node = new Node(index++, e);
+        if (head == null){
+            head = node;
+        } else {
+            Node t = head;
+            while(t != null){
+                t = t.getNextNode();
+            }
+            
+        }
     }
 
     @Override

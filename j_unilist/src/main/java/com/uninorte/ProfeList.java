@@ -60,11 +60,13 @@ public class ProfeList<E> extends AbstractList<E> implements List<E>{
             head = node;
         } else {
             Node t = head;
-            while(t != null){
+            while(t.getNextNode() != null){
                 t = t.getNextNode();
             }
+            t.setNextNode(node);
             
         }
+        return true;
     }
 
     @Override
@@ -156,8 +158,21 @@ public class ProfeList<E> extends AbstractList<E> implements List<E>{
 
     @Override
     public E get(int index) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'get'");
+        if (head == null){
+            return null;
+        }
+        Node t = head;
+        int counter = 0;        
+        while(t != null){
+            if (counter == index){
+                return (E) t.getData();
+            }
+            t = t.getNextNode();
+            counter++;
+
+        }
+        return null;
+
     }
     
 }

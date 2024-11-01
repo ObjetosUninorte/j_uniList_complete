@@ -4,8 +4,12 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
-        ArrayList<String> al = new ArrayList<>();
         ProfeList<String> example = new ProfeList<>();
+        System.out.println(example.size());
+        example.add("Augusto");
+        example.add("Augusto2");
+        System.out.println(example.size());
+        System.out.println(example.get(0));
+        System.out.println(example.get(1));
     }
 }

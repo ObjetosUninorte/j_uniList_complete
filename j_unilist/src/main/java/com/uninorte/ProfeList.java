@@ -51,6 +51,12 @@ public class ProfeList<E> extends AbstractList<E> implements List<E>{
     }
 
     @Override
+    public E remove(int index) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'add'");
+    }    
+
+    @Override
     public boolean remove(Object o) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'remove'");

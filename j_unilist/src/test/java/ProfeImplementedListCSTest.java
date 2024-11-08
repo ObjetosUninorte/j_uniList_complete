@@ -2,17 +2,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-import com.uninorte.ProfeImplementedList;
-import com.uninorte.ProfeList;
+import com.uninorte.ProfeListCS;
 
-public class ProfeImplementedListTest {
+public class ProfeImplementedListCSTest {
     
     // create all test for the profeList class
 
     // test the add method
     @Test
     public void testAdd() {
-        ProfeImplementedList<Integer> list = new ProfeImplementedList<>();
+        ProfeListCS<Integer> list = new ProfeListCS<>();
         list.add(1);
         list.add(2);
         list.add(3);
@@ -22,7 +21,7 @@ public class ProfeImplementedListTest {
     // test the get method
     @Test
     public void testGet() {
-        ProfeImplementedList<Integer> list = new ProfeImplementedList<>();
+        ProfeListCS<Integer> list = new ProfeListCS<>();
         list.add(1);
         list.add(2);
         list.add(3);
@@ -32,18 +31,18 @@ public class ProfeImplementedListTest {
     // test the remove method
     @Test
     public void testRemove() {
-        ProfeImplementedList<String> list = new ProfeImplementedList<>();
-        list.add("1");
-        list.add("2");
-        list.add("3");
-        list.remove("1");
+        ProfeListCS<Integer> list = new ProfeListCS<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.remove(1);
         assertEquals(2, list.size());
     }
 
     // test the size method
     @Test
     public void testSize() {
-        ProfeImplementedList<Integer> list = new ProfeImplementedList<>();
+        ProfeListCS<Integer> list = new ProfeListCS<>();
         list.add(1);
         list.add(2);
         list.add(3);
@@ -53,7 +52,7 @@ public class ProfeImplementedListTest {
     // test the clear method
     @Test
     public void testClear() {
-        ProfeImplementedList<Integer> list = new ProfeImplementedList<>();
+        ProfeListCS<Integer> list = new ProfeListCS<>();
         list.add(1);
         list.add(2);
         list.add(3);
@@ -64,14 +63,14 @@ public class ProfeImplementedListTest {
     // test the isEmpty method
     @Test
     public void testIsEmpty() {
-        ProfeImplementedList<Integer> list = new ProfeImplementedList<>();
+        ProfeListCS<Integer> list = new ProfeListCS<>();
         assertEquals(true, list.isEmpty());
     }
 
     // test the contains method
     @Test
     public void testContains() {
-        ProfeImplementedList<Integer> list = new ProfeImplementedList<>();
+        ProfeListCS<Integer> list = new ProfeListCS<>();
         list.add(1);
         list.add(2);
         list.add(3);
@@ -81,7 +80,7 @@ public class ProfeImplementedListTest {
     // test the indexOf method
     @Test
     public void testIndexOf() {
-        ProfeImplementedList<Integer> list = new ProfeImplementedList<>();
+        ProfeListCS<Integer> list = new ProfeListCS<>();
         list.add(1);
         list.add(2);
         list.add(3);
@@ -91,7 +90,7 @@ public class ProfeImplementedListTest {
     // test the lastIndexOf method
     @Test
     public void testLastIndexOf() {
-        ProfeImplementedList<Integer> list = new ProfeImplementedList<>();
+        ProfeListCS<Integer> list = new ProfeListCS<>();
         list.add(1);
         list.add(2);
         list.add(3);
@@ -104,8 +103,8 @@ public class ProfeImplementedListTest {
     // test the addAll method
     @Test
     public void testAddAll() {
-        ProfeImplementedList<Integer> list = new ProfeImplementedList<>();
-        ProfeImplementedList<Integer> list2 = new ProfeImplementedList<>();
+        ProfeListCS<Integer> list = new ProfeListCS<>();
+        ProfeListCS<Integer> list2 = new ProfeListCS<>();
         list2.add(1);
         list2.add(2);
         list2.add(3);
@@ -117,8 +116,8 @@ public class ProfeImplementedListTest {
     // test the addAll method with index
     @Test
     public void testAddAllIndex() {
-        ProfeImplementedList<Integer> list = new ProfeImplementedList<>();
-        ProfeImplementedList<Integer> list2 = new ProfeImplementedList<>();
+        ProfeListCS<Integer> list = new ProfeListCS<>();
+        ProfeListCS<Integer> list2 = new ProfeListCS<>();
         list2.add(1);
         list2.add(2);
         list2.add(3);
@@ -129,7 +128,7 @@ public class ProfeImplementedListTest {
     // test the set method
     @Test
     public void testSet() {
-        ProfeImplementedList<Integer> list = new ProfeImplementedList<>();
+        ProfeListCS<Integer> list = new ProfeListCS<>();
         list.add(1);
         list.add(2);
         list.add(3);
@@ -140,7 +139,7 @@ public class ProfeImplementedListTest {
     // test the remove with index method
     @Test
     public void testRemoveIndex() {
-        ProfeImplementedList<Integer> list = new ProfeImplementedList<>();
+        ProfeListCS<Integer> list = new ProfeListCS<>();
         list.add(1);
         list.add(2);
         list.add(3);
@@ -151,7 +150,7 @@ public class ProfeImplementedListTest {
     // test the remove with object method
     @Test
     public void testRemoveObject() {
-        ProfeImplementedList<Integer> list = new ProfeImplementedList<>();
+        ProfeListCS<Integer> list = new ProfeListCS<>();
         list.add(1);
         list.add(2);
         list.add(3);
@@ -162,8 +161,8 @@ public class ProfeImplementedListTest {
     // test the removeAll method
     @Test
     public void testRemoveAll() {
-        ProfeImplementedList<Integer> list = new ProfeImplementedList<>();
-        ProfeImplementedList<Integer> list2 = new ProfeImplementedList<>();
+        ProfeListCS<Integer> list = new ProfeListCS<>();
+        ProfeListCS<Integer> list2 = new ProfeListCS<>();
         list2.add(1);
         list2.add(2);
         list2.add(3);
@@ -177,8 +176,8 @@ public class ProfeImplementedListTest {
     // test the retainAll method
     @Test
     public void testRetainAll() {
-        ProfeImplementedList<Integer> list = new ProfeImplementedList<>();
-        ProfeImplementedList<Integer> list2 = new ProfeImplementedList<>();
+        ProfeListCS<Integer> list = new ProfeListCS<>();
+        ProfeListCS<Integer> list2 = new ProfeListCS<>();
         list2.add(1);
         list2.add(2);
         list2.add(3);
@@ -193,8 +192,8 @@ public class ProfeImplementedListTest {
     // test the containsAll method
     @Test
     public void testContainsAll() {
-        ProfeImplementedList<Integer> list = new ProfeImplementedList<>();
-        ProfeImplementedList<Integer> list2 = new ProfeImplementedList<>();
+        ProfeListCS<Integer> list = new ProfeListCS<>();
+        ProfeListCS<Integer> list2 = new ProfeListCS<>();
         list2.add(1);
         list2.add(2);
         list2.add(3);
@@ -207,11 +206,11 @@ public class ProfeImplementedListTest {
     // test the subList method
     @Test
     public void testSubList() {
-        ProfeImplementedList<Integer> list = new ProfeImplementedList<>();
+        ProfeListCS<Integer> list = new ProfeListCS<>();
         list.add(1);
         list.add(2);
         list.add(3);
-        ProfeImplementedList<Integer> list2 = (ProfeImplementedList<Integer>) list.subList(0, 2);
+        ProfeListCS<Integer> list2 = (ProfeListCS<Integer>) list.subList(0, 2);
         assertEquals(2, list2.size());
     }
 

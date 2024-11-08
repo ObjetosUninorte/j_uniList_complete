@@ -2,9 +2,7 @@ package com.uninorte;
 
 import java.util.AbstractList;
 import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
-import java.util.ListIterator;
 
 public class ProfeImplementedList<E> extends AbstractList<E>{
 
@@ -38,23 +36,6 @@ public class ProfeImplementedList<E> extends AbstractList<E>{
         return false;
     }
 
-    @Override
-    public Iterator iterator() {
-        return new Iterator<E>(){
-            Node current = head;
-            @Override
-            public boolean hasNext() {
-                return current != null;
-            }
-
-            @Override
-            public E next() {
-                E data = (E) current.getData();
-                current = current.getNextNode();
-                return data;
-            }
-        };
-    }
 
     @Override
     public Object[] toArray() {
@@ -302,17 +283,6 @@ public class ProfeImplementedList<E> extends AbstractList<E>{
         return lastIndex;
     }
 
-    @Override
-    public ListIterator listIterator() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'listIterator'");
-    }
-
-    @Override
-    public ListIterator listIterator(int index) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'listIterator'");
-    }
 
     @Override
     public List subList(int fromIndex, int toIndex) {
